@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+requests
+python-dotenv
+google-genai
+groq
+pypdf
+python-docx
+youtube-transcript-api
+python-pptx
+pymupdf
+pytesseract
+Pillow
+playwright
