@@ -2737,7 +2737,7 @@ def generate_single_content(
 
         return {
             "content": content,
-           "image_url": "http://127.0.0.1:8001/generated-infographics/infographic.png",
+           "image_url": "http://127.0.0.1:8000/generated-infographics/infographic.png",
             "format": "png",
             "provider": "Groq + HTML Renderer",
             "specialist": specialist,
