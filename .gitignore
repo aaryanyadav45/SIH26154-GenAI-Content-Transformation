@@ -22,4 +22,6 @@ build/
 
 # OS
 .DS_Store
-Thumbs.db
+Thumbs.dbBackend/generated_infographics/*.html 
+Backend/generated_infographics/*.png 
+Backend/generated_infographics/*.html 
