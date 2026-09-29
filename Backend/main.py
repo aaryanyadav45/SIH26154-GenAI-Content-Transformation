@@ -26,6 +26,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from google import genai
+from google.genai import types
 from groq import Groq
 
 try:
@@ -109,19 +110,23 @@ if not GROQ_API_KEY:
 if not OPENROUTER_API_KEY:
     raise RuntimeError("OPENROUTER_API_KEY is not set")
 
-
 # =========================================================
 # AI CLIENTS
 # =========================================================
 
 gemini_client = genai.Client(
-    api_key=GEMINI_API_KEY
+    api_key=GEMINI_API_KEY,
+    http_options=types.HttpOptions(
+        timeout=15000,
+        retry_options=types.HttpRetryOptions(
+            attempts=1
+        )
+    )
 )
 
 groq_client = Groq(
     api_key=GROQ_API_KEY
 )
-
 
 # =========================================================
 # MODELS
